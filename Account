@@ -1,0 +1,33 @@
+static String[] Username = {"Jai","Rest of the team"};
+	static String[] Password = {"Jai","Rest of the team"};
+	static boolean z = false;
+	static boolean y = false ;
+	static  LinkedList<String> newUser = new LinkedList<String>();
+	static  LinkedList<String> newPass = new LinkedList<String>();
+  public static void CreateAccount(String a,String b) {
+		for(int i =0;i<Username.length;i++) {newUser.add(Username[i]);}
+		for(int j = 0;j<Password.length;j++) {newPass.add(Password[j]);}
+		System.out.println("The Account has been Created");
+		newUser.add(a);
+		newPass.add(b);
+		
+	}
+  public static void UserAuthencication(String a,String b) {
+		for(int i = 0;i<Username.length;i++) {
+			if(a.equals(Username[i])) {
+				y = true;
+				//System.out.println("jai");
+			}
+		}
+		for(int i = 0;i<Password.length;i++) {
+			if(b.equals(Password[i])) {
+				z = true;
+				//System.out.println("jai2");
+			}
+		}
+		if(z == true && y == true) {
+			System.out.println("You have Loged in");
+			//System.out.println("jai3");
+		}
+	
+	}
